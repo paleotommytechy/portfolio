@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+{% block main %}
+
+<!-- Hero -->
+<header class="bg-light py-5">
+    <div class="container px-5">
+      <div class="row align-items-center">
+        <div class="col-lg-8 col-xl-7 col-xxl-6">
+          <div class="my-5">
+            <h2 class="text-center fw-bold mb-2">Hi! I am Ifeoluwa,</h2>
+            <h2 class="text-primary text-center fw-bold mb-2">a full-stack web developer</h2>
+            <p class="lead text-muted mb-4">
+              I specialize in building web applications using React and
+              Django. Scroll down to see what I have been working on.
+            </p>
+            <div class="d-grid gap-3 d-sm-flex justify-content-center">
+              <a class="btn btn-primary btn-large text-uppercase" href="#">
+                Learn More
+                <span class="material-icons-outlined ms-2">help_outline</span>
+              </a>
+              <a class="btn btn-outline-primary btn-large text-uppercase" href="#">
+                View My Work
+                <span class="material-icons-outlined ms-2">manage_search</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-xxl-6 justify-content-center">
+          <img class="img-fluid rounded-3 my-5" src="{% static 'images/hero.jpeg' %}" alt="Hero Image">
+        </div>
+      </div>
+    </div>
+</header>
+<!-- End Hero -->
+
+{% endblock main %}
