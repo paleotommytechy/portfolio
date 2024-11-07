@@ -1,6 +1,50 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Home {% endblock title %}
+{% block nav %} 
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <span class="material-icons-outlined me-1">important_devices</span>
+        Tommy Techy
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container px-3">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link me-lg-3" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-lg-3" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-lg-3" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-lg-3" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-lg-3" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+{% endblock nav%}
 {% block main %}
 
 <!-- Hero -->
@@ -36,3 +80,32 @@
 <!-- End Hero -->
 
 {% endblock main %}
+
+{% block about %}
+  {% include 'about.html' %}
+{% endblock about %}
+{% block project %}
+  {% include 'project.html' %}
+{% endblock project %}
+{% block testimonial %}
+  {% include 'testimonies.html' %}
+{% endblock testimonial %}
+{% block contact %}
+  {% include 'contact.html' %}
+{% endblock contact %}
+
+
+{% block footer %}
+<!-- Footer -->
+<footer class="text-center py-4">
+  <div class="social text-center">
+    <h5 class="text-uppercase">Follow me</h5>
+    <a href="https://www.github.com/Paleotommytechy/"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/Olusegun-ife-tomiwa/"><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/9028168649/"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://x.com/Ifeoluwa_2209/"><i class="fab fa-twitter"></i></a>
+</div>
+  <div class="container px-5 mb-2">Copyright &copy; 2024  TommyTechy</div>
+</footer>
+<!-- End Footer -->
+{% endblock footer %}

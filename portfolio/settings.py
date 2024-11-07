@@ -22,10 +22,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-j8%zyks^(8&d%601=&@1!m5dp2^z_a1eo#!+nd@#)94lx80q96'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_POST = '587'
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'olusegunifetomiwa2000@gmail.com'
+EMAIL_HOST_PASSWORD = 'sjwuejofdfbyfrkx'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["myportfolio-website-111v.onrender.com"]
+ALLOWED_HOSTS = ["myportfolio-website-111v.onrender.com","127.0.0.1"]
 
 
 # Application definition
@@ -119,6 +126,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
