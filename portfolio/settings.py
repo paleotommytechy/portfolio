@@ -32,7 +32,7 @@ EMAIL_HOST_PASSWORD = 'sjwuejofdfbyfrkx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["portfolio-bhi8.onrender.com"]
+ALLOWED_HOSTS = ["portfolio-bhi8.onrender.com","127.0.0.1"]
 
 
 # Application definition
