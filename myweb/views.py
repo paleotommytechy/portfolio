@@ -35,7 +35,7 @@ def contact(request):
                 subject,
                 full_message,
                 email,
-                ['tomiwadesignandtech00@gmail.com'])
+                ['olusegunifetomiwa2000@gmail.com'])
             print("Email succesfully sent")
         return redirect('contact_success')
     else:
