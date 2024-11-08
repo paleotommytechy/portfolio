@@ -72,7 +72,9 @@
           </div>
         </div>
         <div class="col-xl-5 col-xxl-6 justify-content-center">
-          <img class="img-fluid rounded-3 my-5" src="{% static 'images/hero.jpeg' %}" alt="Hero Image">
+          {% for p in profile %}
+          <img class="img-fluid rounded-3 my-5" src="{{p.image.url}}" alt="Hero Image">
+          {% endfor %}
         </div>
       </div>
     </div>

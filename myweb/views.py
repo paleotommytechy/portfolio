@@ -9,7 +9,8 @@ from django.http import HttpResponse
 def homepage(request):
     projects = Project.objects.all()
     testimonies = Testimonie.objects.all()
-    return render(request, 'homepage.html',{'projects':projects,'testimonies':testimonies})
+    profile = Profile.objects.all()
+    return render(request, 'homepage.html',{'projects':projects,'testimonies':testimonies, 'profile':profile})
 
 def about(request):
     return render(request, 'about.html')

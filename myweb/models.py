@@ -17,3 +17,9 @@ class Testimonie(models.Model):
 
     def __str__(self):
         return self.author_name
+class Profile(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='images/myprofile')
+
+    def __str__(self):
+        return self.name
